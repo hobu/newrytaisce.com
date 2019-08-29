@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<head>
+    <title>Directions - Newry Taisce</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' /> -->
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.28.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.28.0/mapbox-gl.css' rel='stylesheet' />
+
+
+    <link href="/favicon.ico" rel="icon">
+
+<link rel="canonical" href="/directions.html">
+
+        <meta name="author" content="Administrator" />
+        <meta name="description" content="Newry Taisce is located in Newry Township, Freeborn County, Minnesota. Drive east on Freeborn County 30 (Exit 22), one mile south on 850th Avenue, then one mile east on 310th Street, and finally 1.5 miles south on 860th Avenue. The main driveway entrance is one half mile south of …" />
+
+    <meta property="og:site_name" content="Newry Taisce" />
+    <meta property="og:type" content="article"/>
+    <meta property="og:title" content="Directions"/>
+    <meta property="og:url" content="/directions.html"/>
+    <meta property="og:description" content="Newry Taisce is located in Newry Township, Freeborn County, Minnesota. Drive east on Freeborn County 30 (Exit 22), one mile south on 850th Avenue, then one mile east on 310th Street, and finally 1.5 miles south on 860th Avenue. The main driveway entrance is one half mile south of …" />
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="/theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="/theme/css/pygments/native.css" rel="stylesheet">
+    <link rel="stylesheet" href="/theme/css/style.css" type="text/css"/>
+
+
+
+
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                         <li><a href="/index.html">
+                             Newry Taisce
+                          </a></li>
+                         <li class="active"><a href="/directions.html">
+                             Directions
+                          </a></li>
+                         <li><a href="/history.html">
+                             History
+                          </a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<!-- End Banner -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+    <section id="content" class="body">
+        <h1 class="entry-title">Directions</h1>
+        
+        <div class="entry-content">
+            <p>Newry Taisce is located in Newry Township, Freeborn County, Minnesota.  Drive
+east on Freeborn County 30 (Exit 22), one mile south on 850th Avenue, then one
+mile east on 310th Street, and finally 1.5 miles south on 860th Avenue. The main
+driveway entrance is one half mile south of the St. Mary's Cemetery entrance.</p>
+<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v2.2.0/mapbox-gl-directions.js'></script>
+<link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v2.2.0/mapbox-gl-directions.css' type='text/css' />
+
+<div id='map'></div>
+
+
+<style>
+    #map { position: absolute; height: 100%;}
+    #content{ height:440px;}
+</style>
+
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoiaG9idSIsImEiOiJjaXZsZ29yNWMwOWk3MnlxaWhiMTBxY3gyIn0.WUCErgoR7-87TAu56SyFtQ';
+var map = new mapboxgl.Map({
+    container: 'content', // container id
+    style: 'mapbox://styles/mapbox/streets-v9', //stylesheet location
+    center: [-93.15356666253518,43.78641851100642], // starting position
+    zoom: 10 // starting zoom
+  });
+
+
+map.on('load', function () {
+    map.addSource('hunting', {'type':'geojson', data: {"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[-93.149836063385,43.797584031214434],[-93.15380573272704,43.79755305536528],[-93.15376281738281,43.795725451843126],[-93.152174949646,43.79474967453173],[-93.15271139144897,43.79385132577733],[-93.15496444702148,43.79391328129739],[-93.15496444702148,43.79092385423618],[-93.15659523010254,43.790892874934606],[-93.15650939941406,43.79028877534411],[-93.1595778465271,43.79022681606652],[-93.15966367721558,43.78297713720161],[-93.15839767456053,43.78297713720161],[-93.15841913223267,43.783922123809695],[-93.15747499465942,43.78413900387448],[-93.15723896026611,43.78434039180155],[-93.15760374069214,43.78482062181284],[-93.1574535369873,43.78533183016631],[-93.15653085708618,43.785486740925464],[-93.1551146507263,43.78520790126994],[-93.15485715866089,43.78452628774743],[-93.15573692321777,43.78404605537162],[-93.15732479095459,43.78395310672428],[-93.15798997879028,43.783736225985066],[-93.15805435180663,43.78296164549345],[-93.14985752105711,43.782853203423734],[-93.14968585968018,43.7895607497757],[-93.14966440200806,43.794811629120446],[-93.149836063385,43.797584031214434]]]}}
+    }
+    );
+
+    map.addSource('ponds',  { "type":"geojson", "data": { "type": "FeatureCollection", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "name": null, "acres": 5.1212347534499001, "natural": null }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -93.151774711644777, 43.791886175754009 ], [ -93.152235000605728, 43.791601511043844 ], [ -93.152419712356362, 43.791305696663741 ], [ -93.152392222945224, 43.790914201398287 ], [ -93.152253896652326, 43.790695588490777 ], [ -93.152009857226886, 43.790580756869488 ], [ -93.151495781508785, 43.790546892502576 ], [ -93.15096052064942, 43.790516892355747 ], [ -93.150722043702459, 43.790505691448594 ], [ -93.150430944264613, 43.790640424165687 ], [ -93.150277537131871, 43.790744266787705 ], [ -93.150400027068244, 43.7909897727653 ], [ -93.15076587216376, 43.791077577365492 ], [ -93.151115666876009, 43.791103985243929 ], [ -93.151242956546639, 43.791149879451055 ], [ -93.151328068251402, 43.791280277429351 ], [ -93.15140267938088, 43.791449074732284 ], [ -93.151615723275242, 43.791878709677661 ], [ -93.151774711644777, 43.791886175754009 ] ] ] } }, { "type": "Feature", "properties": { "name": null, "acres": 2.1133043120880499, "natural": null }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -93.151800946678037, 43.792780220427332 ], [ -93.15169521195692, 43.792410277449875 ], [ -93.151564034616158, 43.792339281600839 ], [ -93.151360713345042, 43.792230423895397 ], [ -93.150980344004935, 43.79204114064283 ], [ -93.150783765484732, 43.792008187542351 ], [ -93.150451259558793, 43.792620686709498 ], [ -93.150497585096602, 43.792810412055211 ], [ -93.150851209061713, 43.792781477911504 ], [ -93.151145704113006, 43.792681451007908 ], [ -93.151551977990167, 43.792752082883176 ], [ -93.151650442618447, 43.792837356125986 ], [ -93.151800946678037, 43.792780220427332 ] ] ] } }, { "type": "Feature", "properties": { "name": null, "acres": 0.68888128029358897, "natural": null }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -93.152488904824068, 43.792864708468684 ], [ -93.152286266829776, 43.793026297029606 ], [ -93.152502788906403, 43.793173092723627 ], [ -93.152778128842087, 43.793267618157387 ], [ -93.152896088735403, 43.793291183704596 ], [ -93.15301379450068, 43.793215111653346 ], [ -93.153059208297179, 43.793044243154263 ], [ -93.15301311658591, 43.792949411707539 ], [ -93.152999883571567, 43.79289723818254 ], [ -93.152855640064701, 43.792840495287891 ], [ -93.15269207324917, 43.79291188380185 ], [ -93.152488904824068, 43.792864708468684 ] ] ] } }, { "type": "Feature", "properties": { "name": null, "acres": 2.31009331939915, "natural": null }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -93.151037617900769, 43.793976885505373 ], [ -93.149904460018135, 43.793978377369065 ], [ -93.149863547229515, 43.793333157582531 ], [ -93.150407040480488, 43.793270763088245 ], [ -93.150636289371974, 43.793270461168404 ], [ -93.150793918094109, 43.793441060989302 ], [ -93.150944949939586, 43.793592690669527 ], [ -93.151076105389947, 43.793654197926912 ], [ -93.151155076234772, 43.79380117789708 ], [ -93.151194711328515, 43.793933975880137 ], [ -93.151188280903781, 43.793981430960535 ], [ -93.151037617900769, 43.793976885505373 ] ] ] } }, { "type": "Feature", "properties": { "name": null, "acres": 3.1792395464943701, "natural": null }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -93.153592893325282, 43.795630577755752 ], [ -93.153439020916764, 43.796117677368862 ], [ -93.153169252340149, 43.796147299613224 ], [ -93.152837774699549, 43.79605645094653 ], [ -93.152642158381354, 43.79601691823737 ], [ -93.152458186369373, 43.796108456215791 ], [ -93.152304997811584, 43.7962327245164 ], [ -93.152261554619926, 43.796305348169398 ], [ -93.15223427859064, 43.796381461518443 ], [ -93.152062910994218, 43.796346577181097 ], [ -93.152101216021379, 43.796159259710031 ], [ -93.152126439816655, 43.795911098016489 ], [ -93.152148503044558, 43.795691030491973 ], [ -93.152018709558405, 43.795482869197826 ], [ -93.151969701323949, 43.795272259527813 ], [ -93.152014433564233, 43.79507088851387 ], [ -93.152185530160381, 43.795000435864424 ], [ -93.152259963860018, 43.795042471699134 ], [ -93.152315186426705, 43.795154758040731 ], [ -93.152428566294333, 43.795262285141433 ], [ -93.15253867922614, 43.795355771498116 ], [ -93.152681132546704, 43.795458577874712 ], [ -93.15293024197139, 43.795565923070875 ], [ -93.153163074547692, 43.795626472905973 ], [ -93.153592893325282, 43.795630577755752 ] ] ] } }, { "type": "Feature", "properties": { "name": null, "acres": 0.27055651293521399, "natural": null }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -93.154669627570158, 43.790673198715531 ], [ -93.154840634204149, 43.79039930737062 ], [ -93.154442094994124, 43.790335163382032 ], [ -93.154256677845041, 43.79034785286656 ], [ -93.154363363511436, 43.790434782400176 ], [ -93.154456229183481, 43.790489388897754 ], [ -93.154562857690308, 43.790553927973299 ], [ -93.154593881417156, 43.79059866670783 ], [ -93.154669627570158, 43.790673198715531 ] ] ] } }, { "type": "Feature", "properties": { "name": null, "acres": null, "natural": null }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -93.155164807735616, 43.787799763424566 ], [ -93.154562845977765, 43.787385750211619 ], [ -93.154266502623386, 43.787606368378114 ], [ -93.153957030585076, 43.788221346906397 ], [ -93.153950789314038, 43.78854399993638 ], [ -93.154092269720408, 43.788579658677449 ], [ -93.154770127900761, 43.788266340825771 ], [ -93.155164807735616, 43.787799763424566 ] ] ] } }, { "type": "Feature", "properties": { "name": null, "acres": null, "natural": null }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -93.158377283970765, 43.788932295171037 ], [ -93.15863694415404, 43.788209825696327 ], [ -93.158085262979995, 43.788108163226205 ], [ -93.157681918871148, 43.78796020144442 ], [ -93.157504660770201, 43.787760713456059 ], [ -93.157567679279438, 43.787530166120881 ], [ -93.157192536917378, 43.787351435648425 ], [ -93.156647948706905, 43.787254877812465 ], [ -93.156201931676932, 43.787004542375563 ], [ -93.155946533903204, 43.786656639705896 ], [ -93.155883217273669, 43.78677451700873 ], [ -93.155961737530191, 43.78706632652564 ], [ -93.156167252171201, 43.787260656982276 ], [ -93.156676627061827, 43.787408478826762 ], [ -93.157115257819882, 43.787535910293364 ], [ -93.157271426854052, 43.787781520008913 ], [ -93.157081802377959, 43.788258065729799 ], [ -93.156969804680131, 43.788683291080936 ], [ -93.156751415201683, 43.788975507348631 ], [ -93.156885989558077, 43.789072628210917 ], [ -93.157239423117346, 43.789056778487932 ], [ -93.157585531364717, 43.788943632262281 ], [ -93.157847047523106, 43.788922786015526 ], [ -93.158377283970765, 43.788932295171037 ] ] ] } } ] } } );
+
+
+ map.addLayer({
+    'id': 'hunting',
+    'type': 'fill',
+    'source': 'hunting',
+    'layout': {},
+    'paint': {
+        'fill-color': '#f7640e',
+        'fill-opacity': 0.8
+    }
+});
+ map.addLayer({
+    'id': 'ponds',
+    'type': 'fill',
+    'source': 'ponds',
+    'layout': {},
+    'paint': {
+        'fill-color': '#4286f4',
+        'fill-opacity': 0.8
+    }
+});
+});
+// map.fitBounds([[-93.19095994168757, 43.772246075554534],[-93.11617338338279, 43.8005909464583]]);
+
+var directions = new mapboxgl.Directions({
+  unit: 'imperial',
+  profile:'driving',
+  container:'map',
+  // UI controls
+  controls: {
+    inputs: false,
+    instructions: true
+  }
+});
+
+// var origin =  mapboxgl.LatLng( 43.818276,-93.287217);
+// var destination = mapboxgl.LatLng( 43.7946, -93.149737);
+// directions.setOrigin(origin);
+// directions.setDestination(destination);
+
+var origin =  [-93.287217, 43.818276];
+var destination = [ -93.149737, 43.7946 ];
+directions.setOrigin(origin);
+directions.setDestination(destination);
+// map.addControl(directions);
+map.fitBounds([[-93.3048853049505, 43.67775221326423],[-93.14281310052485, 43.83383712224375]]);
+map.resize();
+//    map.directions.query();
+// disable map rotation using right click + drag
+map.dragRotate.disable();
+
+// disable map rotation using touch rotation gesture
+map.touchZoomRotate.disableRotation();
+
+map.boxZoom.enable();
+map.dragPan.enable();
+
+// .. start: -93.287217 43.818276
+// .. end:  -93.149737 43.794697
+
+</script>
+        </div>
+    </section>
+        </div>
+    </div>
+</div>
+<footer>
+   <div class="container" style="background-color: #fff">
+      <hr>
+         <div class="col-xs-10">&copy; 2019, Newry Taisce, LLC </div>
+   </div>
+</footer>
+<script src="/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="/theme/js/respond.min.js"></script>
+
+
+</body>
+</html>
